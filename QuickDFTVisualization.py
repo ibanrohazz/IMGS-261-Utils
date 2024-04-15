@@ -30,11 +30,24 @@ def plotDFT(data):
     plt.title('Phase')
     plt.show()
     
+# Question 2 Data 
 # data = np.array([1/3, 1/3, 0, 0, 0, 0, 0, 1/3]) #2a
 # data = np.array([1/3, 1/3, 1/3, 0, 0, 0, 0, 0]) #2b
 # data = np.array([1, 1/(2**.5), 0, -1/(2**.5), -1, -1/(2**.5), 0, 1/(2**.5)]) #2c
 # data = np.array([1, -1, 1, -1, 1, -1, 1, -1]) #2d
-data = np.array([1, 1, 1, 1, -1, -1, -1, -1]) #2e
+# data = np.array([1, 1, 1, 1, -1, -1, -1, -1]) #2e
+
+# Question 3 Data
+# a 256 samples array ie one cycle of the cosine in the array 
+# data = np.cos(np.linspace(0, 2*np.pi, 256))
+# a 64 samples array ie four cycles of the cosine in the array
+# data = np.cos(np.linspace(0, 8*np.pi, 64))
+# a sine with period equal to 64 
+# data = np.sin(np.linspace(0, 2*np.pi, 64))
+# a 64 samples cos array with a phase shift of pi/4
+# data = np.cos(np.linspace(0, 8*np.pi, 64) + np.pi/4)
+# a cosine with a period of 16 samples 
+data = np.cos(np.linspace(0, 2*np.pi, 16))
 
 dft = DFT(data)
 plotDFT(data)
